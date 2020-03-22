@@ -1,0 +1,19 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+      args:
+        uid: ${UID}
+    ports:
+      - "10001:80"
+    environment:
+      - APACHE_RUN_USER=#${UID}
+      - APACHE_RUN_GROUP=#${UID}
+    volumes:
+      - ".:/src"
+    networks:
+      - rate_it_net
+networks:
+  rate_it_net:
+    driver: bridge
