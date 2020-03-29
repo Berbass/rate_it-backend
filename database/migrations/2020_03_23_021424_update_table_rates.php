@@ -34,10 +34,12 @@ class UpdateTableRates extends Migration
      */
     public function down()
     {
-        Schema::table('rates', function (Blueprint $table) {
-            $table->dropForeign('rates_thing_id_foreign');
-            $table->dropForeign('rates_scale_id_foreign');
-        });
+        // Uncomment if SGBD != SqLite
+        // 
+        // Schema::table('rates', function (Blueprint $table) {
+        //     $table->dropForeign('rates_thing_id_foreign');
+        //     $table->dropForeign('rates_scale_id_foreign');
+        // });
 
         Schema::dropIfExists('rates');
     }

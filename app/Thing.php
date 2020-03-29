@@ -14,7 +14,8 @@ use Illuminate\Database\Eloquent\Model;
 class Thing extends Model
 {
     protected $fillable = [
-        'label', 'description'
+        'label',
+        'description'
     ];
 
     public function rates()

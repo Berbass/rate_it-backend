@@ -4,6 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * This class describes a thing.
+ * 
+ * @property id integer
+ * @property scale RateScale
+ * @property thing Thing
+ */
 class Rate extends Model
 {
     public function scale()
